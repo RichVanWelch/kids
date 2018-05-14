@@ -1,0 +1,498 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700);
+
+
+}
+* {
+  margin:0;
+  box-sizing:border-box;
+}
+
+body {
+  margin:0;
+  background-color:#0b0527;
+  font-family: 'Roboto', sans-serif;
+  font-weight:500;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width:960px;
+  position:relative;
+  overflow:hidden;
+}
+
+.headerbg {
+  width:100%;
+  height:60px;
+  background-color:#05349e;
+  box-shadow: 0 10px 10px rgba(0,0,0,0.19) inset;
+  transform: rotate(-180deg);
+  -webkit-transform: rotate(-180deg);
+  -moz-transform: rotate(-180deg);
+  poistion:fixed;
+}
+
+
+.headerwrap {
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  margin: 0 auto;
+  width:960px;
+}
+
+.headerfont {
+  color:white;
+  font-size: .8em;
+  letter-spacing:.07em;
+  margin-left:20px;
+  display:inline;
+  font-weight:400;
+  width:10px;
+  bottom:10px;
+  position:relative;
+
+}
+
+.headerlogo {
+  padding:3.5px 0;
+  width:240px;
+}
+
+a {
+ text-decoration:none;
+  color:white;
+}
+
+.headerinput {
+  float:right;
+  width:140px;
+  height:29px;
+  margin: 14.5px 0 14.5px 20px;
+  font-size:1em;
+  padding-left:5px;
+}
+
+.SMwrap {
+  height:60px;
+  float:right;
+}
+
+.SMicon {
+  width:29px;
+  background-size:contain;
+  z-index:5;
+  float:right;
+  position: relative;
+  top: 50%;
+  transform: translate(0, -50%);
+  -webkit-transform: translate(0, -50%);
+  -moz-transform: translate(0, -50%);
+  margin-right:10px;
+  box-sizing:content-box;
+}
+
+.imgwrap {
+  width:100%;
+  height:710px;
+  background:url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/133207/TeamToon_main.jpg") no-repeat;
+  background-size: contain;
+}
+
+.btnwrap {
+  width:100%;
+  height:40px;
+  bottom:0px;
+  position:absolute;
+}
+
+.btnbars {
+  width:215px;
+  height:40px;
+  bottom:0;
+  background:#05349e;
+  position:relative;
+  margin-left:20px;
+  float:left;
+  transition: transform .5s;
+  -webkit-transition: transform .5s;
+}
+
+.btnbars:hover {
+  -webkit-transform:scaleY(4);
+  -webkit-transform-origin: 50% 100%;
+  -webkit-transition: transform .5s;
+  transform:scaleY(4);
+  transform-origin: 50% 100%;
+  transition: transform .5s;
+}
+
+
+
+#b1:hover ~ .t1{
+ bottom:130px;
+ transition: bottom .5s;
+}
+
+#b2:hover ~ .t2{
+ bottom:130px;
+ transition: bottom .5s;
+}
+
+#b3:hover ~ .t3{
+ bottom:130px;
+ transition: bottom .5s;
+}
+
+#b4:hover ~ .t4{
+ bottom:130px;
+ transition: bottom .5s;
+}
+
+.text {
+  font-family:1em;
+  color:white;
+  letter-spacing:.1em;
+  padding-left:10px;
+  bottom:10px;
+  left:15px;
+  position:absolute;
+  display:inline;
+}
+
+.text2 {
+  font-family:0.75em;
+  color:white;
+  letter-spacing:.1em;
+  padding-left:10px;
+  bottom:10px;
+  left:15px;
+  position:absolute;
+  display:inline;
+}
+
+
+
+.t1 {
+  transition: bottom .4s;
+  margin-left:5px;
+}
+
+.t2 {
+  transition: bottom .4s;
+  margin-left:240px;
+}
+
+.t3 {
+  transition: bottom .4s;
+  margin-left:475px;
+}
+
+.t4 {
+  transition: bottom .4s;
+  margin-left:710px;
+}
+
+.backdooropen {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/133207/backdoor_web.png");
+  background-size:contain;
+  background-repeat: no-repeat;
+  z-index:20;
+  width:157px;
+  height:186px;
+  position:absolute;
+  top:273px;
+  left:70px;
+  opacity: 0;
+  transition: opacity .5s linear;
+  -webkit-transition: opacity .5s linear;
+  -moz-transition: opacity .5s linear;
+}
+
+.backdoorhit {
+  width:157px;
+  height:186px;
+  position:absolute;
+  top:273px;
+  left:70px;
+  z-index:75;
+}
+
+.backdoorAbout {
+  position:absolute;
+  top: 50px;
+  left:20px;
+  z-index:30;
+  font-size:1.5em;
+  font-weight:700;
+  letter-spacing:.1em;
+  color:white;
+  opacity:0;
+  transition: opacity .5s linear;
+  -webkit-transition: opacity .5s linear;
+  -moz-transition: opacity .5s linear;
+}
+
+.backdoorAbout:hover {
+  text-decoration:underline;
+  cursor:pointer;
+}
+
+.aboutus {
+  width:600px;
+  height:300px;
+  background-color: rgba(5, 52, 158, .75);
+  margin:0 auto;
+  top:150px;
+  z-index:50;
+  position:relative;
+  transition: opacity .5s linear;
+  -webkit-transition: opacity .5s linear;
+  -moz-transition: opacity .5s linear;
+  opacity:0;
+  box-shadow: 0 0 10px 10px rgba(5,52,158, .75);
+  display:none;
+}
+
+.aboutusText {
+  font-size: 1.1em;
+  font-weight:400;
+  color: white;
+  top:130px;
+  position:absolute;
+  padding:10px;
+  left:20px;
+}
+
+.aboutusHeader {
+  font-size: 3em;
+  color: white;
+  position: absolute;
+  top:60px;
+  display:inline;
+  letter-spacing:.1em;
+}
+
+.aboutusLogo {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/133207/TeamToon_logo_web_vs2.png");
+  background-size:contain;
+  width:100px;
+  height:100px;
+  display:inline-block;
+  margin:10px 20px;
+}
+
+.aboutusClose {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/133207/remove11.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  float:right;
+  z-index:50;
+  width:40px;
+  height:40px;
+  cursor:pointer;
+}
+
+.light {
+  width:408px;
+  height:426px;
+  background:url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/133207/light_web.png");
+  position:absolute;
+  z-index:45;
+  top:120px;
+  left:105px;
+}
+
+.open {
+  width:142px;
+  height:65px;
+  position:absolute;
+  z-index:40;
+  left:620px;
+  top:280px;
+  background:url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/133207/openon_web.png");
+  opacity:0;
+  transition: opacity .5s linear;
+  -webkit-transition: opacity .5s linear;
+  -moz-transition: opacity .5s linear;
+}
+
+.off {
+  width:142px;
+  height:65px;
+  position:absolute;
+  left:620px;
+  top:280px;
+  background:url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/133207/openoff.png");
+  opacity:1;
+  z-index:35;
+}
+
+.frontdoorOpen {
+  width:168px;
+  height:258px;
+  background:url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/133207/doorOpen.png");
+  position:absolute;
+  left:610px;
+  top:351px;
+  opacity:0;
+  transition: opacity .5s linear;
+  -webkit-transition: opacity .5s linear;
+  -moz-transition: opacity .5s linear;
+}
+
+.frontdoorHit {
+  width:168px;
+  height:258px;
+  position:absolute;
+  left:610px;
+  top:351px;
+  border-top-left-radius:85px;
+  border-top-right-radius:85px;
+  z-index:75;
+}
+
+.frontdoorTeam {
+  position:absolute;
+  top:80px;
+  left:20px;
+  font-size:1.5em;
+  font-weight:700;
+  letter-spacing:.1em;
+  color:white;
+  opacity: 0;
+  transition: opacity .5s linear;
+  -webkit-transition: opacity .5s linear;
+  -moz-transition: opacity .5s linear;
+}
+
+.frontdoorTeam:hover {
+  text-decoration:underline;
+  cursor:pointer;
+}
+
+.dog {
+  background:url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/133207/character_dog.png");
+  background-repeat:no-repeat;
+  width:260px;
+  height:150px;
+  top:540px;
+  left:-300px;
+  z-index:80;
+  -webkit-animation: run .6s steps(8);
+  -webkit-animation-iteration-count: infinite;
+  animation: run .6s steps(8);
+  animation-iteration-count: infinite;
+  -moz-animation: run .6s steps(8);
+  -moz-animation-iteration-count: infinite;
+  position:absolute;
+
+}
+
+@-webkit-keyframes run {
+  0% {background-position:0px 0px;}
+  100% {background-position:-2300px 0px;}
+}
+
+@keyframes run {
+  0% {background-position:0px 0px;}
+  100% {background-position:-2300px 0px;}
+}
+
+@-moz-keyframes run {
+  0% {background-position:0px 0px;}
+  100% {background-position:-2300px 0px;}
+}
+
+.ourTeam {
+  width:600px;
+  height:300px;
+  background-color: rgba(5, 52, 158, .75);
+  margin:0 auto;
+  top:150px;
+  z-index:100;
+  position:relative;
+  transition: opacity .6s linear;
+  -webkit-transition: opacity .6s linear;
+  -moz-transition: opacity .6s linear;
+  opacity:0;
+  box-shadow: 0 0 10px 10px rgba(5,52,158, .75);
+  display:none;
+}
+
+.eyes {
+  width:30px;
+  height:10px;
+  background:url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/133207/eyes.png");
+  background-position:-200px 0px;
+ position:absolute;
+ top:145px;
+ left:492px;
+
+}
+
+.teamHeader {
+  font-size: 3em;
+  color: white;
+  position: absolute;
+  left:20px;
+  display:inline;
+  letter-spacing:.1em;
+}
+
+.teamImage {
+  width:140px;
+  height:140px;
+  position:relative;
+  top:80px;
+  margin:0 28px;
+  background:url("//s3-us-west-2.amazonaws.com/s.cdpn.io/133207/profile/profile-512_2.jpg");
+  background-size:contain;
+  background-repeat:no-repeat;
+  display:inline-block;
+}
+
+.ti2 {
+   background:url("//s3-us-west-2.amazonaws.com/s.cdpn.io/198190/profile/profile-512_1.jpg");
+  background-size:contain;
+  background-repeat:no-repeat;
+}
+
+.ti3 {
+  background:url("//s3-us-west-2.amazonaws.com/s.cdpn.io/226541/profile/profile-512_4.jpg");
+  background-size:contain;
+  background-repeat:no-repeat;
+}
+
+.teamClose {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/133207/remove11.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  float:right;
+  z-index:50;
+  width:40px;
+  height:40px;
+  cursor:pointer;
+  position:absolute;
+  left:560px;
+}
+
+.teamText {
+  width:140px;
+  height:140px;
+  position:relative;
+  top:80px;
+  margin:0 28px;
+  font-size:1em;
+  font-weight:700;
+  color:white;
+  display:inline-block;
+  text-align:center;
+}
+
+.tT2 {
+  font-weight:400;
+  font-size:.8em;
+  top:-35px;
+}
